@@ -1698,3 +1698,7 @@ textarea {
         display: none;
     }
 }
+
+.story blockquote {
+    margin-left: 100px;
+}
