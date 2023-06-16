@@ -1,0 +1,70 @@
+  <style>
+    .testi-carousel-container {
+      text-align: center;
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonial {
+      display: none;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial.active {
+      display: block;
+    }
+    
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    
+    .quote {
+      font-style: italic;
+    }
+    
+    .author {
+      font-weight: bold;
+    }
+  </style>
+  <div class="testi-carousel-container">
+    <div class="testimonial active">
+      <img src="avatar1.jpg" alt="Avatar" class="avatar">
+      <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor felis a nisl varius, id fringilla turpis dapibus."</p>
+      <p class="author">- John Doe</p>
+    </div>
+    <div class="testimonial">
+      <img src="avatar2.jpg" alt="Avatar" class="avatar">
+      <p class="quote">"Vivamus id velit eget lectus elementum fermentum vel ac nulla. Morbi eget lectus nec elit consequat accumsan."</p>
+      <p class="author">- Jane Smith</p>
+    </div>
+  </div>
+  
+  <script>
+    // JavaScript code for auto carousel
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentTestimonial = 0;
+    
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, idx) => {
+        if (idx === index) {
+          testimonial.classList.add('active');
+        } else {
+          testimonial.classList.remove('active');
+        }
+      });
+    }
+    
+    function carousel() {
+      currentTestimonial++;
+      if (currentTestimonial >= testimonials.length) {
+        currentTestimonial = 0;
+      }
+      showTestimonial(currentTestimonial);
+    }
+    
+    setInterval(carousel, 3000); // Change testimonial every 3 seconds
+  </script>
+
