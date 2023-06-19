@@ -2822,8 +2822,8 @@ pre code {
 }
 
 .rowFlexy img {
-    width: 548px;
-    height: 274px;
+    width: auto;
+    height: auto;
 }
 
 .divBelowFlexy {
