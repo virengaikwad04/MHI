@@ -2810,6 +2810,22 @@ pre code {
     height: 20%;
 }
 
+.columnFlexy-logos {
+    flex-basis: 100%; /* 12 columns: each column takes 8.33% of the container width */
+    display: flex;
+    box-sizing: border-box;
+    height: 20%;
+    align-items: center;
+}
+
+.columnFlexy-certs {
+    flex-basis: 100%; /* 12 columns: each column takes 8.33% of the container width */
+    display: flex;
+    box-sizing: border-box;
+    height: 20%;
+    align-items: center;
+}
+
 .rowFlexy {
     width: 100%;
     flex-grow: 1;
@@ -2821,9 +2837,41 @@ pre code {
     text-align: center;
 }
 
+.rowFlexy-logos {
+    width: 100%;
+    flex-grow: 1;
+    margin: 10px;
+/*    border: 1px solid #ccc;*/
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rowFlexy-certs {
+    width: 100%;
+    flex-grow: 1;
+    margin: 10px;
+/*    border: 1px solid #ccc;*/
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .rowFlexy img {
-    width: 548px;
-    height: 274px;
+    width: auto;
+    height: auto;
+}
+
+.rowFlexy-logos img {
+    width: auto;
+    height: auto;
+}
+
+.rowFlexy-certs img {
+    width: auto;
+    height: auto;
 }
 
 .divBelowFlexy {
@@ -8018,6 +8066,34 @@ button.close {
     .hidden-xs {
         display: none !important;
     }
+    
+    .columnFlexy-logos {
+    flex-basis: 100%; /* 12 columns: each column takes 8.33% of the container width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    height: 20%;
+    }
+    
+    .columnFlexy-certs {
+    flex-basis: 100%; /* 12 columns: each column takes 8.33% of the container width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    height: 20%;
+    }
+    
+    .rowFlexy-logos img {
+    width: 200px;
+    height: 70px;
+}
+    
+    .rowFlexy-certs img {
+    width: 100%;
+        padding: 10px;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
